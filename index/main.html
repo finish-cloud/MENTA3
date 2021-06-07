@@ -10,6 +10,7 @@
           <input type="text" required="required" name="search" placeholder="キーワードを入力">
           <input type="submit" name="submit" value="検索" onclick="return check();">
         </form>
+        <textarea id="log_history" name="log_history" cols="40" rows="4" maxlength="20" placeholder="履歴"></textarea>
         <script type="text/javascript" src="./eel.js"></script>
         <script>
             search.addEventListener('click', () => {
