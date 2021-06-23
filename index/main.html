@@ -1,24 +1,29 @@
 <html>
     <head>
         <title>eelテスト</title>
-        <link rel="stylesheet" href="./style.css">
     </head>
     <body>
         <h2>eelテスト</h2>
-        <form action="cgi-bin/example.cgi" method="post">
-          <p>検索したいキーワードを入力してください。</p>
-          <input type="text" required="required" name="search" placeholder="キーワードを入力">
-          <input type="submit" name="submit" value="検索" onclick="return check();">
-        </form>
-        <textarea id="log_history" name="log_history" cols="40" rows="4" maxlength="20" placeholder="履歴"></textarea>
+        <div class="">
+            検索ワード<input id="serch_word" type="text"></input>
+            <button id="search" onclick="search()">検索</button><br/>
+        </div>
+        <div>
+            <textarea id="result" class="log-view-area"></textarea>
+        </div>
         <script type="text/javascript" src="./eel.js"></script>
         <script>
             search.addEventListener('click', () => {
+                if (document.getElementById('search').value == "" )  {
+                alert("文字が入力されていません。");
+            }
 
+                eel.kimetsu_search(serch_word.value)
             })
 
             eel.expose(view_log_js)
             function view_log_js(text){
+                result.value += text + "\n"
             }
         </script>
     </body>
