@@ -4,7 +4,7 @@ import sys
 import socket
 
 # 定数
-ENTRY_POINT = 'index.html'
+ENTRY_POINT = 'main.html'
 CHROME_ARGS = [
     '--incognit',  # シークレットモード
     '--disable-http-cache',  # キャッシュ無効

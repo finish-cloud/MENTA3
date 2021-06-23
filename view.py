@@ -8,8 +8,8 @@ size = (700, 600)
 
 
 @ eel.expose
-def kimetsu_search(word):
-    search.kimetsu_search(word)
+def kimetsu_search(word, csv_name):
+    search.kimetsu_search(word, csv_name)
 
 
 main.start(app_name, end_point, size)
